@@ -1,13 +1,13 @@
 //
-//  Moody3_0UITestsLaunchTests.swift
-//  Moody3.0UITests
+//  MoodyUITestsLaunchTests.swift
+//  MoodyUITests
 //
-//  Created by Pieter Steyaert on 16/08/2022.
+//  Created by Nassim Versbraegen on 19/08/2022.
 //
 
 import XCTest
 
-class Moody3_0UITestsLaunchTests: XCTestCase {
+class MoodyUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

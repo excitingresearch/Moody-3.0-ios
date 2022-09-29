@@ -1,13 +1,13 @@
 //
-//  Moody3_0UITests.swift
-//  Moody3.0UITests
+//  MoodyUITests.swift
+//  MoodyUITests
 //
-//  Created by Pieter Steyaert on 16/08/2022.
+//  Created by Nassim Versbraegen on 19/08/2022.
 //
 
 import XCTest
 
-class Moody3_0UITests: XCTestCase {
+class MoodyUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
