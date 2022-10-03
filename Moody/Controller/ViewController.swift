@@ -129,7 +129,9 @@ class ViewController: UIViewController {
         
         if (enteredMoodyID.hasText){
             // see if we can connect to Moody
+            
             for m in peripheralArray{
+                print(m)
                 if (m.name != nil && m.name! == enteredMoodyID.text!){
                     store(name: enteredMoodyID.text!)
                     moodyPeripheral = m;
@@ -154,7 +156,7 @@ class ViewController: UIViewController {
     
     @IBAction func powersaving(sender: UISwitch){
         
-        let st = String(format:"%02X", sender.isOn ? 1000:100)
+        let st = String(format:"%02X", sender.isOn ? 1000:3000)
         writeOutgoingValue(data: "2"+st)
     }
     
