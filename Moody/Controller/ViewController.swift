@@ -49,6 +49,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderlabel: UILabel!
     @IBOutlet weak var savinglabel: UILabel!
     @IBOutlet weak var  power: UISwitch!
+    @IBOutlet weak var moodyname: UILabel!
     
 
     @IBAction func scanningAction(_ sender: Any) {
@@ -88,6 +89,7 @@ class ViewController: UIViewController {
         sliderlabel.isHidden = true;
         savinglabel.isHidden = true;
         power.isHidden = true;
+        moodyname.isHidden = true;
     }
     
     func alert(message: String){
@@ -134,6 +136,7 @@ class ViewController: UIViewController {
                 print(m)
                 if (m.name != nil && m.name! == enteredMoodyID.text!){
                     store(name: enteredMoodyID.text!)
+                    moodyname.text = enteredMoodyID.text!
                     moodyPeripheral = m;
                     connectToDevice()
                     toggleConnectionUI();
@@ -156,7 +159,7 @@ class ViewController: UIViewController {
     
     @IBAction func powersaving(sender: UISwitch){
         
-        let st = String(format:"%02X", sender.isOn ? 1000:3000)
+        let st = String(format:"%02X", sender.isOn ? 3000:1000)
         writeOutgoingValue(data: "2"+st)
     }
     
@@ -252,6 +255,7 @@ class ViewController: UIViewController {
         sliderlabel.isHidden = !sliderlabel.isHidden;
         power.isHidden = !power.isHidden;
         savinglabel.isHidden = !savinglabel.isHidden;
+        moodyname.isHidden = !moodyname.isHidden;
     }
     
     func connectToDevice() -> Void {
